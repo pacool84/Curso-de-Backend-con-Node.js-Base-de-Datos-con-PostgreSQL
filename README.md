@@ -42,4 +42,14 @@ docker compose exec postgres bash
 
 Este comando abrirá una terminal dentro del contenedor `postgres`, permitiéndote interactuar con el servidor de base de datos PostgreSQL.
 
-// ...existing code...
+- Para poder conectarse a la base de datos de postgres se debe de utilizar el comando:
+
+```sh
+psql -h localhost -d my_store -U my_user
+```
+
+La parte de `my_user` en el comando hace referencia al usuario que configuró en el archivo `docker-compose.yml`.
+
+![alt text](image.png)
+
+//
