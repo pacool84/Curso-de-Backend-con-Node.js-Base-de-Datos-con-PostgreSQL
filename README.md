@@ -58,9 +58,7 @@ PGADMIN es una herramienta de administración y desarrollo para PostgreSQL, que 
 
 Para agregar la configuración de PGADMIN como servicio en nuestro archivo `docker-compose.yml`, sigue las instrucciones a continuación:
 
-- Se agrega la configuración de PGADMIN como servicio a nuestro archivo `docker-compose.yml`, como se muestra en la imagen:
-
-![Configuración de PGADMIN](ruta/a/la/imagen.png)
+- Se agrega la configuración de PGADMIN como servicio a nuestro archivo `docker-compose.yml`, como se muestra a continuación:
 
 ```yaml
 services:
@@ -73,12 +71,18 @@ services:
       - "5050:80"
 ```
 
-Este servicio permitirá acceder a PGADMIN a través del navegador web en la dirección `http://localhost:80`, utilizando las credenciales configuradas en las variables de entorno `PGADMIN_DEFAULT_EMAIL` y `PGADMIN_DEFAULT_PASSWORD`.
+Este servicio permitirá acceder a PGADMIN a través del navegador web en la dirección `http://localhost:5050`, utilizando las credenciales configuradas en las variables de entorno `PGADMIN_DEFAULT_EMAIL` y `PGADMIN_DEFAULT_PASSWORD`.
 
 - Para levantar el servicio de PGADMIN en un contenedor se debe de ejecutar el siguiente comando:
 
 ```sh
 docker compose up -d pgadmin
 ```
+
+- Una vez que se haya generado el contenedor para el servicio de PGADMIN es necesario conectarse a la URL que se mencionó anteriormente dentro de nuestro "localhost", ingresaremos las credenciales apropiadas y comenzaremos a realizar la conexión al servidor como se muestra en las siguientes imágenes:
+
+![alt text](image-1.png)
+
+![alt text](image-2.png)
 
 //
